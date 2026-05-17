@@ -185,7 +185,7 @@ const Contact = () => {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-32 min-h-screen relative overflow-hidden border-t border-white/5 z-10"
+      className="py-16 sm:py-24 lg:py-32 min-h-screen relative overflow-hidden border-t border-white/5 z-10"
       style={{ background: '#050508' }}
     >
       {/* ── Ambient glows ── */}
@@ -205,7 +205,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 w-full relative z-10">
 
         {/* ── Section Header ── */}
-        <motion.div style={{ y: headerY }} className="text-center mb-20">
+        <motion.div style={{ y: headerY }} className="text-center mb-10 sm:mb-16 lg:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -221,7 +221,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl lg:text-7xl font-black text-white mb-4 tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-7xl font-black text-white mb-4 tracking-tight"
           >
             Initialize{' '}
             <span className="bg-gradient-to-r from-electricBlue via-cyan-400 to-purpleGlow bg-clip-text text-transparent">
@@ -269,7 +269,7 @@ const Contact = () => {
             />
 
             {/* Phone + Location — side by side */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 gap-4 sm:gap-6">
               <InfoCard
                 icon={Phone} label="Comms Link"
                 value="+91 9310625964"
@@ -309,7 +309,7 @@ const Contact = () => {
               <TiltCard glowColor="#00e5ff" className="w-full">
                 <form
                   onSubmit={handleSubmit}
-                  className="p-10 rounded-2xl border border-white/10 flex flex-col gap-8 relative overflow-hidden"
+                  className="p-6 sm:p-10 rounded-2xl border border-white/10 flex flex-col gap-6 sm:gap-8 relative overflow-hidden"
                   style={{ background: 'rgba(8,8,16,0.92)', backdropFilter: 'blur(16px)' }}
                 >
                   {/* Animated top scanning bar */}

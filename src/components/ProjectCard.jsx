@@ -32,10 +32,10 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, delay: index * 0.2 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.8, delay: index * 0.15 }}
       style={{ perspective: 1000 }}
       className="w-full"
     >
@@ -47,15 +47,15 @@ const ProjectCard = ({ project, index }) => {
         }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="glass rounded-2xl p-6 sm:p-10 border border-white/10 hover:border-neonCyan/50 transition-colors duration-500 relative flex flex-col lg:flex-row gap-10 overflow-hidden group"
+        className="glass rounded-2xl p-5 sm:p-8 lg:p-10 border border-white/10 hover:border-neonCyan/50 transition-colors duration-500 relative flex flex-col lg:flex-row gap-6 lg:gap-10 overflow-hidden group"
       >
         {/* Glow Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-electricBlue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
         {/* Content Side */}
-        <div className="flex-1 flex flex-col z-10" style={{ transform: "translateZ(50px)" }}>
-          <h3 className="text-3xl font-black text-white mb-2">{project.title}</h3>
-          <p className="text-neonCyan font-space tracking-widest text-xs uppercase mb-6">{project.subtitle}</p>
+        <div className="flex-1 flex flex-col z-10" style={{ transform: "translateZ(20px)" }}>
+          <h3 className="text-2xl sm:text-3xl font-black text-white mb-2">{project.title}</h3>
+          <p className="text-neonCyan font-space tracking-widest text-xs uppercase mb-4 sm:mb-6">{project.subtitle}</p>
           
           <ul className="space-y-2 mb-6 text-gray-400 text-sm">
             {project.features.map((feature, idx) => (
@@ -87,7 +87,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* Video Demo Side */}
-        <div className="flex-1 relative rounded-xl overflow-hidden min-h-[250px] lg:min-h-full border border-white/10 bg-[#0a0a12]" style={{ transform: "translateZ(75px)" }}>
+        <div className="flex-1 relative rounded-xl overflow-hidden min-h-[220px] sm:min-h-[280px] lg:min-h-[300px] border border-white/10 bg-[#0a0a12]" style={{ transform: "translateZ(30px)" }}>
           {project.video ? (
             <video
               src={project.video}

@@ -31,7 +31,7 @@ const Hero = () => {
           >
             Full Stack Developer <span className="text-neonCyan"> | </span> Computer Vision OpenCV{' '}
             <span className="text-neonCyan"> | </span> Machine Learning{' '}
-            <span className="text-neonCyan"> | </span> Deep Learning
+            <span className="text-neonCyan"> | </span> Deep Learning<span className="text-neonCyan"> | </span>Generative AI
           </motion.div>
 
           {/* CTA Buttons */}

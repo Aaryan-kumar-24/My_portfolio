@@ -36,11 +36,10 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className={`fixed top-0 w-full z-[50] transition-all duration-300 ${
-          scrolled || menuOpen
-            ? 'glass py-4 shadow-[0_4px_30px_rgba(0,229,255,0.1)]'
-            : 'bg-transparent py-6'
-        }`}
+        className={`fixed top-0 w-full z-[50] transition-all duration-300 ${scrolled || menuOpen
+          ? 'glass py-4 shadow-[0_4px_30px_rgba(0,229,255,0.1)]'
+          : 'bg-transparent py-6'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-10 flex justify-between items-center">
           <a href="#hero" className="flex items-center gap-3" onClick={handleLinkClick}>
@@ -53,7 +52,7 @@ const Navbar = () => {
               style={{ filter: 'drop-shadow(0 0 6px #00e5ff66)' }}
             />
             <span className="text-white font-space font-bold text-xl tracking-widest">
-              Aryan<span className="text-electricBlue">.</span>
+              Aryan<span className="text-electricBlue">Kumar</span>
             </span>
           </a>
 
